@@ -11,6 +11,14 @@ export default function AplicacionFortalezaContrasena() {
   const [mostrar_contrasena, setMostrarContrasena] = useState(false);
   const fortaleza = obtener_fortaleza_contrasena(contrasena);
 
+  const copiarAlPortapapeles = () => {
+    navigator.clipboard.writeText(contrasena_generada).then(() => {
+      alert("¡Contraseña copiada al portapapeles!");
+    }).catch(() => {
+      alert("Error al copiar la contraseña.");
+    });
+  };
+
   return (
     <div className="contenedor-principal">
       <div className="contenedor-formulario">
@@ -23,12 +31,21 @@ export default function AplicacionFortalezaContrasena() {
           setMostrar={setMostrarContrasena}
         />
 
-        <BarraFortaleza fortaleza={fortaleza} />
+        <BarraFortaleza fortaleza={fortaleza} contrasena={contrasena} />
 
         <GeneradorContrasena
           contrasena_generada={contrasena_generada}
           setContrasenaGenerada={setContrasenaGenerada}
         />
+
+        {contrasena_generada && (
+          <button 
+            className="boton-copiar" 
+            onClick={copiarAlPortapapeles}
+          >
+            Copiar Contraseña
+          </button>
+        )}
       </div>
     </div>
   );

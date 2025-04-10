@@ -87,7 +87,6 @@ body {
   cursor: pointer;
 }
 
-
 .barra-fortaleza-contenedor {
   width: 100%;
   background-color: #ddd; /* Gris claro */
@@ -95,23 +94,28 @@ body {
   border-radius: 4px;
   margin-bottom: 12px;
 }
-.barra-fortaleza-texto{
-  font-size: 15px;
-}
-
 
 .barra-fortaleza-progreso {
   height: 8px;
   border-radius: 4px;
+  transition: width 0.3s ease; /* Animación suave al cambiar el ancho */
 }
 
 .barra-fortaleza-rojo {
   background-color: red;
 }
 
+.barra-fortaleza-naranja {
+  background-color: orange;
+}
+
 .barra-fortaleza-amarillo {
   background-color: yellow;
-  color: black; /* Para asegurar que el texto sea legible en amarillo */
+  color: black; /* Asegurar que el texto sea legible */
+}
+
+.barra-fortaleza-verde-claro {
+  background-color: lightgreen;
 }
 
 .barra-fortaleza-verde {
@@ -119,5 +123,46 @@ body {
 }
 
 .barra-fortaleza-texto {
+  font-size: 15px;
   margin-bottom: 0;
+}
+.requisitos-lista {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.requisito-item {
+  font-size: 14px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.requisito-cumplido {
+  color: green;
+  font-weight: bold;
+}
+
+.requisito-pendiente {
+  color: gray;
+}
+.boton-copiar {
+  background-color: var(--main-color);
+  color: white;
+  padding: 8px;
+  width: 50%;
+  text-align: center; 
+  border-radius: 4px;
+  margin-top: 12px ;
+  font-size: 15px;
+  border: none; 
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boton-copiar:hover {
+  background-color: var(--second-bg-color); 
 }
