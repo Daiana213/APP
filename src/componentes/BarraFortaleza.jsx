@@ -10,7 +10,6 @@ export default function BarraFortaleza({ fortaleza, contrasena }) {
     "Muy segura",
   ];
 
-  // Requisitos de la contraseña
   const requisitos = [
     { texto: "Al menos 8 caracteres", cumple: contrasena.length >= 8 },
     { texto: "Al menos 1 letra mayúscula", cumple: /[A-Z]/.test(contrasena) },
@@ -24,12 +23,11 @@ export default function BarraFortaleza({ fortaleza, contrasena }) {
       <div className="barra-fortaleza-contenedor">
         <div
           className={`barra-fortaleza-progreso barra-fortaleza-${colores[fortaleza]}`}
-          style={{ width: `${(fortaleza / 5) * 100}%` }}
+          style={{ width: `${(fortaleza / 4) * 100}%` }}
         ></div>
       </div>
       <p className="barra-fortaleza-texto">{textos[fortaleza]}</p>
 
-      {/* Lista de requisitos */}
       <ul className="requisitos-lista">
         {requisitos.map((req, index) => (
           <li
