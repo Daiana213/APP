@@ -1,8 +1,8 @@
 import React from "react";
 
 export default function BarraFortaleza({ fortaleza }) {
-  const colores = ["rojo", "amarillo", "verde", "azul"];
-  const textos = ["Débil", "Moderada", "Fuerte", "Muy Fuerte"];
+  const colores = ["rojo", "amarillo", "verde"];
+  const textos = ["Poco segura", "Segura", "Muy segura"];
 
   return (
     <>
