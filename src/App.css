@@ -1,42 +1,124 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+:root{
+  --bg-color:#fff;
+  --second-bg-color: #341061;
+  --text-color: black;
+  --main-color:#531d94;
+}
+html{
+  font-size: 62.5%;
+  overflow: hidden;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+}
+.contenedor-principal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.contenedor-formulario {
+  width: 600px; 
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 6px rgb(26, 23, 23);
+}
+
+.titulo-formulario {
+  font-size: 3rem;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 16px;
+  color: var(--text-color); 
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.generar-contrasena-boton {
+  width: 100%;
+  background-color: var(--main-color);
+  color: white;
+  padding: 8px; 
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  border: none; 
+  cursor: pointer; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.generar-contrasena-boton:hover {
+  background-color: var(--second-bg-color); 
 }
 
-.card {
-  padding: 2em;
+.contrasena-generada-div {
+  padding: 8px;
+  background-color: lightgray;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 20px;
 }
 
-.read-the-docs {
-  color: #888;
+.input-contrasena-container {
+  position: relative;  
+  margin-bottom: 12px;
+}
+
+.input-contrasena-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+}
+
+.input-contrasena-toggle-button {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  background-color: #ddd; /* Gris muy claro */
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-contrasena-toggle-button:hover {
+  background-color: #ccc; /* Gris un poco más oscuro al pasar el mouse */
+}
+/* BarraFortaleza.css */
+
+.barra-fortaleza-contenedor {
+  width: 100%;
+  background-color: #ddd; /* Gris claro */
+  height: 8px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.barra-fortaleza-progreso {
+  height: 8px;
+  border-radius: 4px;
+}
+
+.barra-fortaleza-rojo {
+  background-color: red;
+}
+
+.barra-fortaleza-amarillo {
+  background-color: yellow;
+  color: black; /* Para asegurar que el texto sea legible en amarillo */
+}
+
+.barra-fortaleza-verde {
+  background-color: green;
+}
+
+.barra-fortaleza-azul {
+  background-color: blue;
+}
+
+.barra-fortaleza-texto {
+  margin-bottom: 0; /* Ajusta el margen si es necesario */
 }
