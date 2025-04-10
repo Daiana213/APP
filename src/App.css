@@ -66,8 +66,12 @@ body {
   margin-bottom: 12px;
 }
 
+.input-contrasena-container ::placeholder{
+  font-size: 15px;
+}
+
 .input-contrasena-input {
-  width: 100%;
+  width: 97%;
   padding: 8px;
   border: 1px solid #ccc; 
   border-radius: 4px;
@@ -75,19 +79,14 @@ body {
 
 .input-contrasena-toggle-button {
   position: absolute;
-  right: 8px;
-  top: 8px;
-  background-color: #ddd; /* Gris muy claro */
+  right: 20px;
+  top: 6px;
   padding: 4px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-.input-contrasena-toggle-button:hover {
-  background-color: #ccc; /* Gris un poco más oscuro al pasar el mouse */
-}
-/* BarraFortaleza.css */
 
 .barra-fortaleza-contenedor {
   width: 100%;
@@ -96,6 +95,10 @@ body {
   border-radius: 4px;
   margin-bottom: 12px;
 }
+.barra-fortaleza-texto{
+  font-size: 15px;
+}
+
 
 .barra-fortaleza-progreso {
   height: 8px;
@@ -120,5 +123,5 @@ body {
 }
 
 .barra-fortaleza-texto {
-  margin-bottom: 0; /* Ajusta el margen si es necesario */
+  margin-bottom: 0;
 }
